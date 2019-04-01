@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
     var currentSliderValue = 0
     @IBOutlet weak var slider: UISlider!
     var targetValue = 0
