@@ -27,7 +27,24 @@ class ViewController: UIViewController {
         
         currentSliderValue = lroundf(slider.value)
         startNewRound()
+        
+        let thumbImage = UIImage(named: "SliderThumb-Normal")
+        slider.setThumbImage(thumbImage, for: .normal)
+        
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let incents = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackerLeftImage = UIImage(named: "SliderTrackLeft")
+        let trackLeftResizeable = trackerLeftImage?.resizableImage(withCapInsets: incents)
+        slider.setMinimumTrackImage(trackLeftResizeable, for: .normal)
+
+        let trackerRightImage = UIImage(named: "SliderTrackRight")
+        let trackRightResizeable = trackerRightImage?.resizableImage(withCapInsets: incents)
+        slider.setMaximumTrackImage(trackRightResizeable, for: .normal)
     }
+    
     //Updated all the labels
     func updateLabels() {
         targetLabel.text = String(targetValue)
