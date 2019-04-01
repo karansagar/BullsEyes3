@@ -54,8 +54,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utb-e4-ezd">
-                                <rect key="frame" x="240" y="307" width="62" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utb-e4-ezd">
+                                <rect key="frame" x="240" y="307" width="97" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -104,13 +104,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="roundNumber" destination="VSf-fp-taA" id="VCr-j1-Lak"/>
+                        <outlet property="scoreLabel" destination="utb-e4-ezd" id="pqZ-Le-cH6"/>
                         <outlet property="slider" destination="aLH-wd-nGv" id="ahh-t1-lUP"/>
                         <outlet property="targetLabel" destination="JtP-wV-MdX" id="xfx-fn-9bp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.714285714285722" y="493.60000000000002"/>
+            <point key="canvasLocation" x="-160" y="726"/>
         </scene>
     </scenes>
 </document>
