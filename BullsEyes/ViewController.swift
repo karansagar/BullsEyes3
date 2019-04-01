@@ -71,11 +71,12 @@ class ViewController: UIViewController {
         
         let valueMessage = "You Scored \(points) Points ! "
         let alert = UIAlertController(title: title, message: valueMessage, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
+        let action = UIAlertAction(title: "Awesome", style: .default, handler: {
+            action in
+                self.startNewRound()
+        })
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        
-        startNewRound()
     }
 }
