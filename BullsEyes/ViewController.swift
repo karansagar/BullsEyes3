@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var roundNumber: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.'
@@ -39,10 +40,18 @@ class ViewController: UIViewController {
         
         gameRound += 1
         targetValue = 1 + Int(arc4random_uniform(100))
-        currentSliderValue = 50
+        currentSliderValue = 25
         slider.value  = Float(currentSliderValue)
         updateLabels()
     }
+    
+    //StartOver
+    @IBAction func startOver(_ sender: UIButton) {
+        score = 0
+        gameRound = 0
+        startNewRound()
+    }
+    
     
     @IBAction func sliderMoved(_ slider: UISlider) {
         print("value of the slider is \(slider.value)")
@@ -75,7 +84,6 @@ class ViewController: UIViewController {
             action in
                 self.startNewRound()
         })
-        
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
