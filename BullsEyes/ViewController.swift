@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
-    
+        
     var currentSliderValue = 0
     @IBOutlet weak var slider: UISlider!
     var targetValue = 0
@@ -18,8 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     var gameRound = 0
     @IBOutlet weak var roundNumber: UILabel!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +53,6 @@ class ViewController: UIViewController {
     
     //Start a new Round
     func startNewRound()  {
-        
         gameRound += 1
         targetValue = 1 + Int(arc4random_uniform(100))
         currentSliderValue = 25
