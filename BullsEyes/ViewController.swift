@@ -81,15 +81,15 @@ class ViewController: UIViewController {
         // Bonus Points if user Score 0 difference than 100 + and less than 5 then 50+
         let title: String
         if difference == 0 {
-            title = "Perfect"
+            title = "Perfect you slided at:\(currentSliderValue)"
             points += 100
         } else if difference < 5 {
-            title = "Almost had it"
+            title = "Almost had it you slided at:\(currentSliderValue)"
             points += 50
         } else if difference < 10 {
-            title = "Pretty Good !"
+            title = "Pretty Good ! you slided at:\(currentSliderValue)"
         } else {
-            title = "Not even Close, try harder !"
+            title = "Not even Close, try harder ! you slided at:\(currentSliderValue)"
         }
         score += points // score = score + points
         
